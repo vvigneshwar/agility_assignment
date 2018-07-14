@@ -1,5 +1,10 @@
 ---
 # tasks file for azure_vm
+- include: dependencies.yml
+  tags:
+    - dependencies
+    - complete
 - include: launch_vm.yml
   tags:
     - launch
+    - complete
