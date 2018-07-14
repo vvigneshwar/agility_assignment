@@ -1,2 +1,14 @@
 ---
-- name: 
+- name: provision virtual machine
+  azure_rm_virtualmachine:
+    name: webappvm1
+    resource_group: jimmyRG
+    os_type: Windows
+    admin_username: jimmy
+    admin_password: {{ vm_password }}
+    image:
+      offer: WindowsServer
+      publisher: MicrosoftWindowsServer
+      sku: 2016-Datacenter
+      version: latest
+    vm_size: Standard_A0
