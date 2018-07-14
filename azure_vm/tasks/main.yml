@@ -1,2 +1,5 @@
 ---
 # tasks file for azure_vm
+- include: launch_vm.yml
+  tags:
+    - launch
