@@ -4,19 +4,20 @@
   tags:
     - dependencies
     - complete
-
 - include: network.yml
-- include: subnet.yml
+- include: subnet.yml 
   tags:
     - network
     - complete
-
 - include: launch_vm.yml
-  tags:
+  tags: 
     - launch
     - complete
-
-- include: disks.yml
+- include: drive_webapp.yml
   tags:
-    - volume
+    - volume_webapp
+    - complete
+- include: drive_sql.yml
+  tags:
+    - volume_sql
     - complete
